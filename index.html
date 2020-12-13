@@ -6,11 +6,11 @@
     <script src="js/projetPerso.js"></script>
     <link rel="stylesheet" type="text/css" href="css/projetPerso.css"\>
 </head>
-<body>
-<h3>calculateur de votre temps d'activitée physique</h3>
+<body onload="initialiserPage()">
+    <h3 id="sport"></h3>
     <form name="ajouterSport">
         <p>nouvelle activité</p>
-        <input type="text" name="nonActivite">
+        <input type="text" name="nomActivite">
         <p>pendant combien de temps</p>
         <input type="number" name="tempsActivite" value="temps d'activitée"><br>
         <input type="button" value="ajoute l'activitée" onclick="ajouterActivite();"><br>
@@ -29,4 +29,3 @@
     <input type="button" value="réinitialiser les activitées" onclick="reset();">
 </body>
 </html>
-
