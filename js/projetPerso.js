@@ -34,6 +34,7 @@ function afficherActivite(){
         nouvel += "<option>"+Object.keys(activite)[i]+ " pendant " +tempsActivite+" heure</option>";
     }
     document.getElementById("activite").innerHTML = nouvel;
+    triNomActivite();
 }
 /**
  * cette fonction permet de réinitialiser l'objet des activités
@@ -47,4 +48,14 @@ function reset(){
     document.affichageSport.tempsTotalActivite.value = tempsTot;
     document.affichageSport.touteActivite.value = "réinitialisé";
     activite = {};
+}
+let nomActivite = [];
+let activiteTri;
+let activiteJoin;
+
+function triNomActivite(){
+    nomActivite.push(nouvelActivite);
+    activiteTri = nomActivite.sort();
+    activiteJoin = activiteTri.join(" - ");
+    document.getElementById("nomActivite").innerHTML = activiteJoin;
 }
